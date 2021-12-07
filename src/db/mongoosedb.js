@@ -2,8 +2,7 @@ const mongoose = require("mongoose");
 const config = require('../config/mongooseConfig')
 
 module.exports = {
-    init: () => {
-      console.log(`mongodb+srv://${config.user}:${config.password}@${config.serverName}/${config.database}?retryWrites=true&w=majority`);
+    init: () => {      
       mongoose
         .connect(
           `mongodb+srv://${config.user}:${config.password}@${config.serverName}/${config.database}?retryWrites=true&w=majority`,
